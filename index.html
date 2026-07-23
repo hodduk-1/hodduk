@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>호떡 서버 - HOTTEOK SERVER</title>
+  <meta name="description" content="정통 클래식 MMORPG 호떡 서버 공식 홈페이지. 안정적인 운영, 쾌적한 환상적인 사냥터와 풍성한 혜택!">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;600;700;900&family=Cinzel:wght@600;800;900&display=swap" rel="stylesheet">
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="dark-theme">
+
+  <!-- Top Announcement Bar -->
+  <div class="announcement-bar" id="announcementBar">
+    <div class="announcement-content">
+      <span class="badge-tag">오픈일정</span>
+      <span class="announcement-text">🔥 <strong>7월 24일 (금) 시즌1</strong> 대기열 오픈 17:00 | 정식 서버 오픈 17:30 바로 시작!</span>
+      <div class="countdown" id="countdownTimer">
+        <span>남은시간: </span>
+        <strong id="timerDays">00</strong>일 
+        <strong id="timerHours">00</strong>시 
+        <strong id="timerMins">00</strong>분 
+        <strong id="timerSecs">00</strong>초
+      </div>
+    </div>
+  </div>
+
+  <!-- Header Navigation -->
+  <header class="main-header" id="mainHeader">
+    <div class="header-container">
+      <a href="#" class="logo-link" id="logoLink">
+        <img src="assets/logo.jpg" alt="호떡 서버 로고" class="logo-img">
+        <div class="logo-text">
+          <span class="brand-title">호떡 서버</span>
+          <span class="brand-sub">HOTTEOK SERVER</span>
+        </div>
+      </a>
+
+      <nav class="nav-menu" id="navMenu">
+        <ul>
+          <li><a href="#server-info" class="nav-link"><i class="fa-solid fa-server"></i> 서버정보</a></li>
+          <li><a href="#updates" class="nav-link"><i class="fa-solid fa-arrows-rotate"></i> 업데이트</a></li>
+          <li><a href="#hunting-boss" class="nav-link"><i class="fa-solid fa-dragon"></i> 사냥터 및 보스</a></li>
+          <li><a href="#promotion" class="nav-link"><i class="fa-solid fa-bullhorn"></i> 홍보안내</a></li>
+          <li><a href="#customer-service" class="nav-link"><i class="fa-solid fa-headset"></i> 고객센터</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button class="btn btn-download" id="headerDownloadBtn">
+          <i class="fa-solid fa-download"></i> 다운로드
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section" id="heroSection">
+    <div class="hero-overlay"></div>
+    <div class="hero-bg-media">
+      <img src="assets/banner.jpg" alt="호떡 서버 메인 배너" class="hero-banner-img">
+    </div>
+    
+    <div class="hero-content">
+      <div class="hero-badge">BEST FANTASY CLASSIC MMORPG</div>
+      <h1 class="hero-title">호떡 서버 <span>SEASON 1</span></h1>
+      <p class="hero-subtitle">완벽한 밸런스 · 24시간 실시간 모니터링 · 풍성한 신규 지원 패키지</p>
+
+      <div class="hero-stats">
+        <div class="stat-item">
+          <i class="fa-solid fa-bolt"></i>
+          <div class="stat-info">
+            <span class="stat-num">X 2.5</span>
+            <span class="stat-label">경험치 배율</span>
+          </div>
+        </div>
+        <div class="stat-item">
+          <i class="fa-solid fa-wand-magic-sparkles"></i>
+          <div class="stat-info">
+            <span class="stat-num">X 2.0</span>
+            <span class="stat-label">인챈트 배율</span>
+          </div>
+        </div>
+        <div class="stat-item">
+          <i class="fa-solid fa-gem"></i>
+          <div class="stat-info">
+            <span class="stat-num">X 2.0</span>
+            <span class="stat-label">아이템 드랍율</span>
+          </div>
+        </div>
+        <div class="stat-item">
+          <i class="fa-solid fa-coins"></i>
+          <div class="stat-info">
+            <span class="stat-num">X 3.0</span>
+            <span class="stat-label">아데나 배율</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Category Cards -->
+      <div class="quick-cards-grid">
+        <a href="#server-info" class="quick-card">
+          <div class="quick-icon"><i class="fa-solid fa-book-bookmark"></i></div>
+          <div class="quick-title">서버정보</div>
+          <div class="quick-desc">배율, 룰 및 시스템 가이드</div>
+        </a>
+        <a href="#updates" class="quick-card">
+          <div class="quick-icon"><i class="fa-solid fa-fire"></i></div>
+          <div class="quick-title">업데이트</div>
+          <div class="quick-desc">시즌1 신규 패치 노트</div>
+        </a>
+        <a href="#promotion" class="quick-card">
+          <div class="quick-icon"><i class="fa-solid fa-gift"></i></div>
+          <div class="quick-title">홍보안내</div>
+          <div class="quick-desc">홍보 참여하고 보상 받기</div>
+        </a>
+        <a href="#customer-service" class="quick-card">
+          <div class="quick-icon"><i class="fa-solid fa-comments"></i></div>
+          <div class="quick-title">고객센터</div>
+          <div class="quick-desc">1:1 실시간 친절 문의</div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Server Overview Grid -->
+  <section class="section-container" id="server-info">
+    <div class="section-header">
+      <h2 class="section-title"><i class="fa-solid fa-layer-group"></i> 서버 핵심 시스템 정보</h2>
+      <p class="section-desc">호떡 서버만의 차별화된 시스템과 인게임 환경을 확인하세요</p>
+    </div>
+
+    <div class="info-panels-grid">
+      <div class="info-card">
+        <div class="info-card-header">
+          <span class="info-idx">01</span>
+          <h3 class="info-card-title">기본 서버 배율 및 설정</h3>
+          <span class="badge badge-gold">기본 배율</span>
+        </div>
+        <div class="info-card-body">
+          <ul>
+            <li><i class="fa-solid fa-check text-gold"></i> <strong>경험치 배율:</strong> 2.5배</li>
+            <li><i class="fa-solid fa-check text-gold"></i> <strong>아데나 배율:</strong> 3.0배</li>
+            <li><i class="fa-solid fa-check text-gold"></i> <strong>아이템 드랍:</strong> 2.0배</li>
+            <li><i class="fa-solid fa-check text-gold"></i> <strong>인챈트 배율:</strong> 2.0배</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="info-card">
+        <div class="info-card-header">
+          <span class="info-idx">02</span>
+          <h3 class="info-card-title">호떡서버 정보</h3>
+          <span class="badge badge-red">반하자</span>
+        </div>
+        <div class="info-card-body">
+          <ul>
+            <li><i class="fa-solid fa-star text-gold"></i> 누구나 쉽게 적응할 수 있는 단순한 서버</li>
+            <li><i class="fa-solid fa-scale-balanced text-gold"></i> 과도한 격차가 없습니다.</li>
+            <li><i class="fa-solid fa-fire text-gold"></i> 저희 서버는 <strong>반하자</strong>입니다.</li>
+            <li><i class="fa-solid fa-bolt text-gold"></i> <strong>스타트 레벨: 30Lv</strong>부터 시작합니다.</li>
+            <li><i class="fa-solid fa-headset text-gold"></i> 고정 신청은 고객센터로 아이디 적어서 보내주시기 바랍니다.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="info-card">
+        <div class="info-card-header">
+          <span class="info-idx">03</span>
+          <h3 class="info-card-title">인챈트 한계 정보</h3>
+          <span class="badge badge-blue">강화 한계</span>
+        </div>
+        <div class="info-card-body">
+          <ul>
+            <li><i class="fa-solid fa-khanda text-gold"></i> <strong>무기 최고 인챈트:</strong> +10</li>
+            <li><i class="fa-solid fa-shield-halved text-gold"></i> <strong>방어구 최고 인챈트:</strong> +9</li>
+            <li><i class="fa-solid fa-ring text-gold"></i> <strong>악세서리 인챈트:</strong> +0</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="info-card">
+        <div class="info-card-header">
+          <span class="info-idx">04</span>
+          <h3 class="info-card-title">혈맹 · 필드 · 동맹 규칙</h3>
+          <span class="badge badge-gold">PVP & 혈맹</span>
+        </div>
+        <div class="info-card-body">
+          <ul>
+            <li><i class="fa-solid fa-handfist text-gold"></i> 필드 및 분쟁은 서버에서 개입하지 않습니다.</li>
+            <li><i class="fa-solid fa-users text-gold"></i> 혈맹 가입 시 <strong>추가 경험치 보너스</strong> 제공</li>
+            <li><i class="fa-solid fa-user-group text-gold"></i> <strong>혈맹 인원 제한:</strong> 30명</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Features & Boss Schedule Tabs -->
+  <section class="section-container bg-dark-accent" id="hunting-boss">
+    <div class="section-header">
+      <h2 class="section-title"><i class="fa-solid fa-khanda"></i> 사냥터 & 보스 레이드 가이드</h2>
+      <p class="section-desc">단계별 사냥터와 강력한 필드 보스 출현 시간표</p>
+    </div>
+
+    <!-- Tabs Header -->
+    <div class="tabs-nav">
+      <button class="tab-btn active" data-tab="tab-zones"><i class="fa-solid fa-map-location-dot"></i> 사냥터 단계별 안내</button>
+      <button class="tab-btn" data-tab="tab-bosses"><i class="fa-solid fa-skull"></i> 필드 보스 스케줄</button>
+      <button class="tab-btn" data-tab="tab-drops"><i class="fa-solid fa-gem"></i> 주요 드랍 아이템</button>
+    </div>
+
+    <!-- Tab Content 1: Zones -->
+    <div class="tab-content active" id="tab-zones">
+      <div class="zones-grid">
+        <div class="zone-box">
+          <div class="zone-tag tag-easy">초보 사냥터</div>
+          <h4 class="zone-name">화둥 / 버땅 / 엘모어밭</h4>
+          <p class="zone-info">초보자 추천 사냥터. 기초 장비 수급 및 성장을 위한 기본 지역.</p>
+          <div class="zone-drop-summary mb-2">
+            <i class="fa-solid fa-gift"></i> <strong>기본 드랍:</strong> 젤, 데이, 아데나, 기타잡템
+          </div>
+          <div class="zone-drop-summary">
+            <i class="fa-solid fa-skull text-gold"></i> <strong>엘모어밭 드랍:</strong> 대검, 황지, 장궁, 마나, 스턴
+          </div>
+        </div>
+        <div class="zone-box">
+          <div class="zone-tag tag-mid">중급 사냥터</div>
+          <h4 class="zone-name">잊혀진 섬 / 기란 감옥 1층</h4>
+          <p class="zone-info">중급자 추천 사냥터. 주요 가치 아이템 및 보너스 수급 지역.</p>
+          <div class="zone-drop-summary mb-2">
+            <i class="fa-solid fa-gift"></i> <strong>잊혀진 섬:</strong> 고대의 주문서, 잊혀진 아이템, 멸마
+          </div>
+          <div class="zone-drop-summary">
+            <i class="fa-solid fa-gift"></i> <strong>기란 감옥 1층:</strong> 드래곤 루비, 깃털
+          </div>
+        </div>
+        <div class="zone-box">
+          <div class="zone-tag tag-hard">상급 사냥터</div>
+          <h4 class="zone-name">오만의 탑 1, 2, 3층</h4>
+          <p class="zone-info">상급자 추천 최상위 던전. 마법서 및 핵심 주문서 획득 지역.</p>
+          <div class="zone-drop-summary mb-1"><i class="fa-solid fa-scroll text-gold"></i> <strong>1층:</strong> 축부, 이뮨, 캔슬</div>
+          <div class="zone-drop-summary mb-1"><i class="fa-solid fa-scroll text-gold"></i> <strong>2층:</strong> 축부, 대검</div>
+          <div class="zone-drop-summary"><i class="fa-solid fa-scroll text-gold"></i> <strong>3층:</strong> 파이어스톰, 축부, 캔슬, 이뮨, 스텟목걸이</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tab Content 2: Boss Schedule -->
+    <div class="tab-content" id="tab-bosses">
+      <div class="table-responsive mb-4">
+        <h4 class="text-gold mb-3"><i class="fa-solid fa-clock"></i> 매일 정시 필드 보스 출현 시간표</h4>
+        <table class="custom-table">
+          <thead>
+            <tr>
+              <th>출현 시간</th>
+              <th>출현 보스 몬스터</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong class="text-gold">매일 20:00</strong></td>
+              <td>바포메트, 데몬, 커츠, 얼음여왕</td>
+            </tr>
+            <tr>
+              <td><strong class="text-gold">매일 21:00</strong></td>
+              <td>피닉스, 여왕개미, 베레스, 에자, 그미노</td>
+            </tr>
+            <tr>
+              <td><strong class="text-gold">매일 22:00</strong></td>
+              <td>데스나이트</td>
+            </tr>
+            <tr>
+              <td><strong class="text-gold">매일 23:00</strong></td>
+              <td>드레이크킹</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="table-responsive mb-4">
+        <h4 class="text-gold mb-3"><i class="fa-solid fa-rotate"></i> 주기별 지정 보스 출현 시간표</h4>
+        <table class="custom-table">
+          <thead>
+            <tr>
+              <th>보스 몬스터</th>
+              <th>젠 시간 (출현 시각)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>카스파</strong></td>
+              <td>04:00 / 10:00 / 16:00 / 22:00 (4시간 주기)</td>
+            </tr>
+            <tr>
+              <td><strong>작은뼈 흑장로 / 크로커다일 / 이프리트</strong></td>
+              <td>02:00 / 08:00 / 14:00 / 20:00 (6시간 주기)</td>
+            </tr>
+            <tr>
+              <td><strong>드레이크</strong></td>
+              <td>00:00 / 06:00 / 12:00 / 18:00 (6시간 주기)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="table-responsive">
+        <h4 class="text-gold mb-3"><i class="fa-solid fa-dungeon"></i> 오만의 탑 보스 스케줄</h4>
+        <table class="custom-table">
+          <thead>
+            <tr>
+              <th>오만의 탑 층수</th>
+              <th>출현 보스 몬스터</th>
+              <th>출현 요일 & 시간</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>1층</strong></td>
+              <td>왜곡의 제니스퀸</td>
+              <td>월, 수, 금 — 22:00</td>
+            </tr>
+            <tr>
+              <td><strong>2층</strong></td>
+              <td>불신의 시어</td>
+              <td>월, 수, 금, 일 — 23:00</td>
+            </tr>
+            <tr>
+              <td><strong>3층</strong></td>
+              <td>공포의 뱀파이어</td>
+              <td>화, 목, 토 — 22:00</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Tab Content 3: Drops -->
+    <div class="tab-content" id="tab-drops">
+      <div class="drop-cards-grid" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px;">
+        <div class="drop-card" style="background: var(--bg-card); border: 1px solid var(--color-border); border-radius: 12px; padding: 24px; text-align: center;">
+          <div class="drop-icon" style="font-size: 32px; color: var(--color-primary); margin-bottom: 12px;"><i class="fa-solid fa-shield-cat"></i></div>
+          <h4 style="color: #fff; font-size: 18px; margin-bottom: 8px;">스텟 장비</h4>
+          <p style="color: var(--color-text-muted); font-size: 13px;">캐릭터 능력치(STR, DEX, INT 등) 향상 필수 스텟 장비</p>
+        </div>
+        <div class="drop-card" style="background: var(--bg-card); border: 1px solid var(--color-border); border-radius: 12px; padding: 24px; text-align: center;">
+          <div class="drop-icon" style="font-size: 32px; color: var(--color-primary); margin-bottom: 12px;"><i class="fa-solid fa-ring"></i></div>
+          <h4 style="color: #fff; font-size: 18px; margin-bottom: 8px;">스텟 악세</h4>
+          <p style="color: var(--color-text-muted); font-size: 13px;">전투 보완 및 스텟 부여 전용 액세서리</p>
+        </div>
+        <div class="drop-card" style="background: var(--bg-card); border: 1px solid var(--color-border); border-radius: 12px; padding: 24px; text-align: center;">
+          <div class="drop-icon" style="font-size: 32px; color: var(--color-primary); margin-bottom: 12px;"><i class="fa-solid fa-scroll"></i></div>
+          <h4 style="color: #fff; font-size: 18px; margin-bottom: 8px;">축복 부여 주문서</h4>
+          <p style="color: var(--color-text-muted); font-size: 13px;">아이템 및 장비에 축복 옵션을 부여하는 필수 주문서</p>
+        </div>
+        <div class="drop-card" style="background: var(--bg-card); border: 1px solid var(--color-border); border-radius: 12px; padding: 24px; text-align: center;">
+          <div class="drop-icon" style="font-size: 32px; color: var(--color-primary); margin-bottom: 12px;"><i class="fa-solid fa-flask-vial"></i></div>
+          <h4 style="color: #fff; font-size: 18px; margin-bottom: 8px;">퓨어 엘릭서</h4>
+          <p style="color: var(--color-text-muted); font-size: 13px;">영구 스텟 추가 및 캐릭터 강화를 위한 엘릭서 재료</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Updates & Notice Section -->
+  <section class="section-container" id="updates">
+    <div class="section-header">
+      <h2 class="section-title"><i class="fa-solid fa-newspaper"></i> 최근 패치 및 공지사항</h2>
+      <p class="section-desc">호떡 서버의 최신 소식과 지속적인 업데이트 내용을 확인하세요</p>
+    </div>
+
+    <div class="notice-list">
+      <div class="notice-item">
+        <span class="notice-category cat-update">패치</span>
+        <a href="javascript:void(0)" class="notice-title" onclick="openModal('modalNotice1')">[시즌 1] 호떡 서버 클라이언트 정식 배포 및 사전 캐릭터 생성 안내</a>
+        <span class="notice-date">2026-07-22</span>
+      </div>
+      <div class="notice-item">
+        <span class="notice-category cat-event">이벤트</span>
+        <a href="javascript:void(0)" class="notice-title" onclick="openModal('modalNotice2')">[홍보 이벤트] 홍보글 작성 시 100% 전원 신규 수호 반지 및 아데나 지급!</a>
+        <span class="notice-date">2026-07-20</span>
+      </div>
+      <div class="notice-item">
+        <span class="notice-category cat-system">시스템</span>
+        <a href="javascript:void(0)" class="notice-title" onclick="openModal('modalNotice3')">[클린] 안티치트 2.4버전 적용 및 24시간 매크로 자동 제재 강화</a>
+        <span class="notice-date">2026-07-18</span>
+      </div>
+      <div class="notice-item">
+        <span class="notice-category cat-update">패치</span>
+        <a href="javascript:void(0)" class="notice-title" onclick="openModal('modalNotice1')">[밸런스] 기사/요정/마법사 클래스 케어 스킬 밸런스 조정안</a>
+        <span class="notice-date">2026-07-15</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Promotion Event Banner Section -->
+  <section class="section-container" id="promotion">
+    <div class="promo-banner-card">
+      <div class="promo-left">
+        <span class="promo-badge"><i class="fa-solid fa-robot"></i> 100% 자동 홍보 시스템</span>
+        <h3 class="promo-title">홍보글 작성 후 링크 등록 시, 인게임 창고로 보상 자동 지급!</h3>
+        <p class="promo-desc">게임 관련 카페, 커뮤니티, 블로그에 호떡 서버를 홍보하신 후 게시글 링크를 등록해 주세요. 서버 시스템이 즉시 검증하여 캐릭터 <strong>창고(무게 상관없이)로 보상 아이템이 100% 자동 지급</strong>됩니다!</p>
+        <div class="promo-rewards">
+          <span><i class="fa-solid fa-rotate text-gold"></i> <strong>홍보 완전 자동화:</strong> 관리자 승인 대기 없이 링크 등록 즉시 즉시발송</span>
+          <span><i class="fa-solid fa-box-archive text-gold"></i> <strong>창고 자동 지급:</strong> 게임 접속 여부와 상관없이 개인 창고로 즉시 보상 지급</span>
+          <span><i class="fa-solid fa-gift text-gold"></i> <strong>홍보 보상 패키지:</strong> 홍보 감사 상자 + 축복받은 주문서 + 정착 지원 아데나</span>
+        </div>
+      </div>
+      <div class="promo-right">
+        <button class="btn btn-gold btn-lg" onclick="openModal('modalCS')">
+          <i class="fa-solid fa-paper-plane"></i> 자동 홍보 링크 등록
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Customer Service Section -->
+  <section class="section-container bg-dark-accent" id="customer-service">
+    <div class="section-header">
+      <h2 class="section-title"><i class="fa-solid fa-headset"></i> 24시간 실시간 고객센터</h2>
+      <p class="section-desc">궁금한 점이 있으시거나 도움이 필요하시면 언제든지 문의해주세요</p>
+    </div>
+
+    <div class="cs-cards-grid">
+      <div class="cs-box" onclick="openModal('modalCS')">
+        <div class="cs-icon"><i class="fa-brands fa-discord"></i></div>
+        <h3>디스코드 1:1 문의</h3>
+        <p>실시간 상담원 대기 중 (답변 평균 3분)</p>
+        <span class="btn-link">디스코드 입장하기 &rarr;</span>
+      </div>
+      <div class="cs-box" onclick="openModal('modalCS')">
+        <div class="cs-icon"><i class="fa-solid fa-comments"></i></div>
+        <h3>오픈 텔레그램 / 카카오</h3>
+        <p>익명 빠른 상담 및 대기실 참여</p>
+        <span class="btn-link">상담 채널 연결 &rarr;</span>
+      </div>
+      <div class="cs-box" onclick="openModal('modalCS')">
+        <div class="cs-icon"><i class="fa-solid fa-envelope"></i></div>
+        <h3>1:1 문의 게시판</h3>
+        <p>계정, 버그 신고, 홍보 인증 전용</p>
+        <span class="btn-link">문의글 작성하기 &rarr;</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Floating Quick Side Banner -->
+  <aside class="floating-cs-banner" id="floatingCs">
+    <div class="floating-inner">
+      <div class="floating-title"><i class="fa-solid fa-shield-halved"></i> 호떡 Quick CS</div>
+      <button class="btn btn-gold btn-block" onclick="openModal('modalDownload')">
+        <i class="fa-solid fa-download"></i> 클라이언트 다운
+      </button>
+      <button class="btn btn-outline btn-block" onclick="openModal('modalCS')">
+        <i class="fa-solid fa-headset"></i> 1:1 친절 문의
+      </button>
+    </div>
+  </aside>
+
+  <!-- Back to Top Button -->
+  <button class="back-to-top" id="backToTopBtn" aria-label="맨 위로 이동">
+    <i class="fa-solid fa-angle-up"></i>
+  </button>
+
+  <!-- Footer -->
+  <footer class="main-footer">
+    <div class="footer-container">
+      <div class="footer-logo">
+        <h2>호떡 서버</h2>
+        <p>HOTTEOK CLASSIC MMORPG SERVER</p>
+      </div>
+      <div class="footer-links">
+        <a href="#server-info">서버정보</a> | 
+        <a href="#updates">업데이트</a> | 
+        <a href="#hunting-boss">사냥터안내</a> | 
+        <a href="#customer-service">고객센터</a> | 
+        <a href="javascript:void(0)" onclick="openModal('modalDownload')">다운로드</a>
+      </div>
+      <p class="footer-copy">&copy; 2026 HOTTEOK SERVER. All Rights Reserved. 본 서버는 테스트 목적의 프리뷰 서버입니다.</p>
+    </div>
+  </footer>
+
+  <!-- Modal 1: Download Modal -->
+  <div class="modal-overlay" id="modalDownload">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3><i class="fa-solid fa-download text-gold"></i> 호떡 서버 클라이언트 다운로드</h3>
+        <button class="modal-close" onclick="closeModal('modalDownload')">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p class="mb-3">호떡 서버를 플레이하시려면 아래 다운로드 링크 중 하나를 선택하여 다운받으세요.</p>
+
+        <div class="download-link-box">
+          <div class="dl-info">
+            <i class="fa-solid fa-file-zipper text-gold"></i>
+            <div>
+              <strong>호떡 서버 풀 클라이언트 v1.0 (권장)</strong>
+              <small>용량: 2.4 GB | 압축해제 후 바로 실행 가능</small>
+            </div>
+          </div>
+          <a href="javascript:void(0)" class="btn btn-gold" onclick="alert('클라이언트 다운로드가 곧 시작됩니다 (구글 드라이브 1)')">
+            <i class="fa-brands fa-google-drive"></i> 다운로드 1
+          </a>
+        </div>
+
+        <div class="download-link-box">
+          <div class="dl-info">
+            <i class="fa-solid fa-cloud-arrow-down text-gold"></i>
+            <div>
+              <strong>보조 다운로드 링크 (MEGA 미러)</strong>
+              <small>용량: 2.4 GB | 속도 최적화 서버</small>
+            </div>
+          </div>
+          <a href="javascript:void(0)" class="btn btn-outline" onclick="alert('보조 클라이언트 다운로드가 진행됩니다 (MEGA)')">
+            <i class="fa-solid fa-cloud"></i> 다운로드 2
+          </a>
+        </div>
+
+        <div class="download-link-box">
+          <div class="dl-info">
+            <i class="fa-solid fa-wand-magic-sparkles text-gold"></i>
+            <div>
+              <strong>최신 접속기 & 패치 파일</strong>
+              <small>용량: 15 MB | 기존 클라이언트 보유자 전용</small>
+            </div>
+          </div>
+          <a href="javascript:void(0)" class="btn btn-outline" onclick="alert('접속기 패치 파일 다운로드')">
+            <i class="fa-solid fa-file-arrow-down"></i> 패치 다운
+          </a>
+        </div>
+
+        <div class="modal-notice">
+          <i class="fa-solid fa-circle-exclamation"></i> 백신 프로그램에서 가오류로 차단할 경우 '예외 처리' 후 실행해주시기 바랍니다.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 2: Customer Service & Auto Promo Form -->
+  <div class="modal-overlay" id="modalCS">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3><i class="fa-solid fa-robot text-gold"></i> 자동 홍보 등록 & 1:1 고객센터</h3>
+        <button class="modal-close" onclick="closeModal('modalCS')">&times;</button>
+      </div>
+      <div class="modal-body">
+        <form id="csForm" onsubmit="handleCsSubmit(event)">
+          <div class="form-group">
+            <label for="csCategory">문의 유형</label>
+            <select id="csCategory" class="form-control" required>
+              <option value="promo" selected>자동 홍보 보상 등록 (창고 자동 지급)</option>
+              <option value="bug">버그 및 오류 제보</option>
+              <option value="account">계정 / 캐릭터 문의</option>
+              <option value="other">기타 일반 문의</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="csName">캐릭터명 (보상 받을 캐릭터)</label>
+            <input type="text" id="csName" class="form-control" placeholder="예: 호떡기사" required>
+          </div>
+
+          <div class="form-group">
+            <label for="csContent">홍보 게시글 URL 링크 / 문의 내용</label>
+            <textarea id="csContent" class="form-control" rows="4" placeholder="작성하신 홍보 게시글 URL 주소를 입력하세요. 검증 후 인게임 창고로 자동 발송됩니다." required></textarea>
+          </div>
+
+          <div class="modal-notice mb-3" style="background: rgba(245, 190, 46, 0.15); border-color: var(--color-primary); color: #fef08a;">
+            <i class="fa-solid fa-box-archive"></i> 홍보 링크 검증 완료 즉시 해당 캐릭터의 <strong>인게임 창고</strong>로 보상이 자동으로 지급됩니다.
+          </div>
+
+          <button type="submit" class="btn btn-gold btn-block">
+            <i class="fa-solid fa-paper-plane"></i> 자동 등록 및 보상 받기
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 3: Notice Detail Modal -->
+  <div class="modal-overlay" id="modalNotice1">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3><i class="fa-solid fa-bullhorn text-gold"></i> 공지사항 상세보기</h3>
+        <button class="modal-close" onclick="closeModal('modalNotice1')">&times;</button>
+      </div>
+      <div class="modal-body">
+        <h4>[시즌 1] 호떡 서버 클라이언트 정식 배포 안내</h4>
+        <p class="text-muted">작성일: 2026-07-22 | 작성자: 호떡 운영팀</p>
+        <hr>
+        <p>안녕하세요. <strong>호떡 서버</strong> 운영팀입니다.</p>
+        <p>드디어 7월 24일 시즌 1 오픈을 앞두고 풀 클라이언트 사전 다운로드를 시작합니다.</p>
+        <p>사전 생성 이벤트에 참여하시면 <strong>사전생성 특별 칭호 + 100만 아데나 + 스타터 지원 상자</strong>가 오픈 당일 인벤토리로 자동 지급됩니다.</p>
+        <p>유저분들의 많은 기대와 관심 부탁드립니다. 감사합니다!</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
