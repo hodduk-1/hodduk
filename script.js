@@ -148,3 +148,20 @@ function initSmoothScroll() {
     });
   });
 }
+
+/* 8. Promo Text Copy Helper */
+function copyPromoText() {
+  const promoEl = document.getElementById('promoText');
+  if (!promoEl) return;
+  const text = promoEl.innerText.trim();
+  if (!text) {
+    alert('현재 설정된 홍보 내용이 없습니다. (추후 업데이트 예정)');
+    return;
+  }
+  navigator.clipboard.writeText(text).then(() => {
+    alert('홍보내용이 복사되었습니다!');
+  }).catch(() => {
+    alert('복사에 실패했습니다. 직접 드래그하여 복사해 주세요.');
+  });
+}
+

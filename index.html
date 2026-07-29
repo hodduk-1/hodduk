@@ -44,7 +44,6 @@
       <nav class="nav-menu" id="navMenu">
         <ul>
           <li><a href="#server-info" class="nav-link"><i class="fa-solid fa-server"></i> 서버정보</a></li>
-          <li><a href="#updates" class="nav-link"><i class="fa-solid fa-arrows-rotate"></i> 업데이트</a></li>
           <li><a href="#hunting-boss" class="nav-link"><i class="fa-solid fa-dragon"></i> 사냥터 및 보스</a></li>
           <li><a href="#promotion" class="nav-link"><i class="fa-solid fa-bullhorn"></i> 홍보안내</a></li>
           <li><a href="#customer-service" class="nav-link"><i class="fa-solid fa-headset"></i> 고객센터</a></li>
@@ -103,26 +102,21 @@
       </div>
 
       <!-- Quick Category Cards -->
-      <div class="quick-cards-grid">
+      <div class="quick-cards-grid" style="grid-template-columns: repeat(3, 1fr);">
         <a href="#server-info" class="quick-card">
           <div class="quick-icon"><i class="fa-solid fa-book-bookmark"></i></div>
           <div class="quick-title">서버정보</div>
           <div class="quick-desc">배율, 룰 및 시스템 가이드</div>
         </a>
-        <a href="#updates" class="quick-card">
-          <div class="quick-icon"><i class="fa-solid fa-fire"></i></div>
-          <div class="quick-title">업데이트</div>
-          <div class="quick-desc">시즌1 신규 패치 노트</div>
-        </a>
         <a href="#promotion" class="quick-card">
           <div class="quick-icon"><i class="fa-solid fa-gift"></i></div>
           <div class="quick-title">홍보안내</div>
-          <div class="quick-desc">홍보 참여하고 보상 받기</div>
+          <div class="quick-desc">자동 홍보 참여하고 보상 받기</div>
         </a>
         <a href="#customer-service" class="quick-card">
           <div class="quick-icon"><i class="fa-solid fa-comments"></i></div>
           <div class="quick-title">고객센터</div>
-          <div class="quick-desc">1:1 실시간 친절 문의</div>
+          <div class="quick-desc">오픈 카카오 및 텔레그램 문의</div>
         </a>
       </div>
     </div>
@@ -367,38 +361,7 @@
     </div>
   </section>
 
-  <!-- Updates & Notice Section -->
-  <section class="section-container" id="updates">
-    <div class="section-header">
-      <h2 class="section-title"><i class="fa-solid fa-newspaper"></i> 최근 패치 및 공지사항</h2>
-      <p class="section-desc">호떡 서버의 최신 소식과 지속적인 업데이트 내용을 확인하세요</p>
-    </div>
-
-    <div class="notice-list">
-      <div class="notice-item">
-        <span class="notice-category cat-update">패치</span>
-        <a href="javascript:void(0)" class="notice-title" onclick="openModal('modalNotice1')">[시즌 1] 호떡 서버 클라이언트 정식 배포 및 사전 캐릭터 생성 안내</a>
-        <span class="notice-date">2026-07-22</span>
-      </div>
-      <div class="notice-item">
-        <span class="notice-category cat-event">이벤트</span>
-        <a href="javascript:void(0)" class="notice-title" onclick="openModal('modalNotice2')">[홍보 이벤트] 홍보글 작성 시 100% 전원 신규 수호 반지 및 아데나 지급!</a>
-        <span class="notice-date">2026-07-20</span>
-      </div>
-      <div class="notice-item">
-        <span class="notice-category cat-system">시스템</span>
-        <a href="javascript:void(0)" class="notice-title" onclick="openModal('modalNotice3')">[클린] 안티치트 2.4버전 적용 및 24시간 매크로 자동 제재 강화</a>
-        <span class="notice-date">2026-07-18</span>
-      </div>
-      <div class="notice-item">
-        <span class="notice-category cat-update">패치</span>
-        <a href="javascript:void(0)" class="notice-title" onclick="openModal('modalNotice1')">[밸런스] 기사/요정/마법사 클래스 케어 스킬 밸런스 조정안</a>
-        <span class="notice-date">2026-07-15</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- Promotion Event Banner Section -->
+  <!-- Promotion Event Banner & System Section -->
   <section class="section-container" id="promotion">
     <div class="promo-banner-card">
       <div class="promo-left">
@@ -408,13 +371,57 @@
         <div class="promo-rewards">
           <span><i class="fa-solid fa-rotate text-gold"></i> <strong>홍보 완전 자동화:</strong> 관리자 승인 대기 없이 링크 등록 즉시 즉시발송</span>
           <span><i class="fa-solid fa-box-archive text-gold"></i> <strong>창고 자동 지급:</strong> 게임 접속 여부와 상관없이 개인 창고로 즉시 보상 지급</span>
-          <span><i class="fa-solid fa-gift text-gold"></i> <strong>홍보 보상 패키지:</strong> 홍보 감사 상자 + 축복받은 주문서 + 정착 지원 아데나</span>
         </div>
       </div>
       <div class="promo-right">
-        <button class="btn btn-gold btn-lg" onclick="openModal('modalCS')">
-          <i class="fa-solid fa-paper-plane"></i> 자동 홍보 링크 등록
-        </button>
+        <a href="https://web-admin-next-ten.vercel.app/promo?db=%EB%B3%B8%EC%84%9C%EB%B2%84" target="_blank" class="btn btn-gold btn-lg">
+          <i class="fa-solid fa-paper-plane"></i> 홍보 완료 인증하기 (클릭)
+        </a>
+      </div>
+    </div>
+
+    <!-- Promo Sites & Verification Section -->
+    <div class="promo-sites-container" style="margin-top: 40px; background: var(--bg-card); border: 1px solid rgba(245, 190, 46, 0.25); border-radius: 16px; padding: 35px;">
+      <div class="promo-verify-wrapper">
+        <a href="https://web-admin-next-ten.vercel.app/promo?db=%EB%B3%B8%EC%84%9C%EB%B2%84" target="_blank" class="promo-verify-btn">
+          <i class="fa-solid fa-circle-check"></i> ✅ 홍보 완료 인증하기 (클릭)
+        </a>
+      </div>
+
+      <h3 style="color: var(--color-primary); font-size: 22px; margin-bottom: 15px; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 8px;">
+        <i class="fa-solid fa-globe"></i> 홍보 사이트 목록
+      </h3>
+
+      <div class="featured-site" style="text-align: center; margin-bottom: 20px;">
+        <a href="https://onetooday.com/" target="_blank" class="btn btn-gold btn-block" style="padding: 14px; font-size: 18px;">
+          🔥 [추천] 원투데이 홍보 바로가기 (클릭)
+        </a>
+      </div>
+
+      <div class="site-buttons-grid">
+        <div class="site-btn-item"><a href="https://todaycp.com/" target="_blank">투데이</a></div>
+        <div class="site-btn-item"><a href="https://todaync.com/" target="_blank">투데이2</a></div>
+        <div class="site-btn-item"><a href="https://lineagefree.com/" target="_blank">린프리</a></div>
+        <div class="site-btn-item"><a href="https://freebene.com/lineage" target="_blank">프리베네</a></div>
+        <div class="site-btn-item"><a href="https://linfreemoa.com/bbs/board.php?bo_table=adult" target="_blank">린모아</a></div>
+        <div class="site-btn-item"><a href="https://uami5.net/" target="_blank">우아미</a></div>
+        <div class="site-btn-item"><a href="https://oraksil.cc/" target="_blank">투데이프리</a></div>
+        <div class="site-btn-item"><a href="https://todaypop.net/freeboard" target="_blank">팝리니지</a></div>
+        <div class="site-btn-item"><a href="https://99daily.org/" target="_blank">린커뮤</a></div>
+        <div class="site-btn-item"><a href="https://hb-king.xyz/" target="_blank">월드프리</a></div>
+        <div class="site-btn-item"><a href="https://lintoday.me/" target="_blank">린투데이</a></div>
+        <div class="site-btn-item"><a href="https://linworlds.com/" target="_blank">린월드</a></div>
+        <div class="site-btn-item"><a href="https://freenara.net/" target="_blank">프리나라</a></div>
+      </div>
+
+      <div class="promo-copy-wrapper" style="margin-top: 35px;">
+        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px;">
+          <h3 style="color: var(--color-primary); font-size: 20px; margin: 0;"><i class="fa-solid fa-copy"></i> 홍보 내용</h3>
+          <button class="btn btn-outline" onclick="copyPromoText()"><i class="fa-solid fa-clipboard"></i> 홍보내용 복사</button>
+        </div>
+        <div id="promoText" class="promo-copy-box">
+<!-- 홍보 내용 공란 (미정) -->
+        </div>
       </div>
     </div>
   </section>
@@ -426,25 +433,19 @@
       <p class="section-desc">궁금한 점이 있으시거나 도움이 필요하시면 언제든지 문의해주세요</p>
     </div>
 
-    <div class="cs-cards-grid">
-      <div class="cs-box" onclick="openModal('modalCS')">
-        <div class="cs-icon"><i class="fa-brands fa-discord"></i></div>
-        <h3>디스코드 1:1 문의</h3>
-        <p>실시간 상담원 대기 중 (답변 평균 3분)</p>
-        <span class="btn-link">디스코드 입장하기 &rarr;</span>
-      </div>
-      <div class="cs-box" onclick="openModal('modalCS')">
-        <div class="cs-icon"><i class="fa-solid fa-comments"></i></div>
-        <h3>오픈 텔레그램 / 카카오</h3>
-        <p>익명 빠른 상담 및 대기실 참여</p>
-        <span class="btn-link">상담 채널 연결 &rarr;</span>
-      </div>
-      <div class="cs-box" onclick="openModal('modalCS')">
-        <div class="cs-icon"><i class="fa-solid fa-envelope"></i></div>
-        <h3>1:1 문의 게시판</h3>
-        <p>계정, 버그 신고, 홍보 인증 전용</p>
-        <span class="btn-link">문의글 작성하기 &rarr;</span>
-      </div>
+    <div class="cs-cards-grid" style="grid-template-columns: repeat(2, 1fr); max-width: 800px; margin: 0 auto;">
+      <a href="https://open.kakao.com/o/sOwPX7Fi" target="_blank" class="cs-box" style="text-decoration: none;">
+        <div class="cs-icon"><i class="fa-solid fa-comment-dots" style="color: #fee500;"></i></div>
+        <h3>오픈 카카오 1:1 문의</h3>
+        <p>1:1 오픈채팅방 실시간 빠른 상담</p>
+        <span class="btn-link">오픈채팅 연결하기 &rarr;</span>
+      </a>
+      <a href="https://t.me/hotteoksv" target="_blank" class="cs-box" style="text-decoration: none;">
+        <div class="cs-icon"><i class="fa-brands fa-telegram" style="color: #229ed9;"></i></div>
+        <h3>텔레그램 (@hotteoksv)</h3>
+        <p>공식 텔레그램 채널 및 1:1 문의</p>
+        <span class="btn-link">텔레그램 연결하기 &rarr;</span>
+      </a>
     </div>
   </section>
 
@@ -455,9 +456,9 @@
       <button class="btn btn-gold btn-block" onclick="openModal('modalDownload')">
         <i class="fa-solid fa-download"></i> 클라이언트 다운
       </button>
-      <button class="btn btn-outline btn-block" onclick="openModal('modalCS')">
-        <i class="fa-solid fa-headset"></i> 1:1 친절 문의
-      </button>
+      <a href="https://open.kakao.com/o/sOwPX7Fi" target="_blank" class="btn btn-outline btn-block" style="text-decoration: none;">
+        <i class="fa-solid fa-comments"></i> 카카오 1:1 문의
+      </a>
     </div>
   </aside>
 
@@ -475,8 +476,8 @@
       </div>
       <div class="footer-links">
         <a href="#server-info">서버정보</a> | 
-        <a href="#updates">업데이트</a> | 
         <a href="#hunting-boss">사냥터안내</a> | 
+        <a href="#promotion">홍보안내</a> | 
         <a href="#customer-service">고객센터</a> | 
         <a href="javascript:void(0)" onclick="openModal('modalDownload')">다운로드</a>
       </div>
@@ -492,18 +493,18 @@
         <button class="modal-close" onclick="closeModal('modalDownload')">&times;</button>
       </div>
       <div class="modal-body">
-        <p class="mb-3">호떡 서버를 플레이하시려면 아래 다운로드 링크 중 하나를 선택하여 다운받으세요.</p>
+        <p class="mb-3">호떡 서버를 플레이하시려면 아래 구글 드라이브 다운로드 링크를 이용하세요.</p>
 
         <div class="download-link-box">
           <div class="dl-info">
             <i class="fa-solid fa-file-zipper text-gold"></i>
             <div>
-              <strong>호떡 서버 풀 클라이언트 v1.0 (권장)</strong>
-              <small>용량: 2.4 GB | 압축해제 후 바로 실행 가능</small>
+              <strong>호떡 서버 풀 클라이언트 (구글 드라이브)</strong>
+              <small>압축해제 후 바로 실행 가능</small>
             </div>
           </div>
-          <a href="javascript:void(0)" class="btn btn-gold" onclick="alert('클라이언트 다운로드가 곧 시작됩니다 (구글 드라이브 1)')">
-            <i class="fa-brands fa-google-drive"></i> 다운로드 1
+          <a href="https://drive.google.com/file/d/1svxuS8FARqCMqyyE4SktaH6xcO-TIsAx/view?usp=sharing" target="_blank" class="btn btn-gold">
+            <i class="fa-brands fa-google-drive"></i> 다운로드 (구글 드라이브)
           </a>
         </div>
 
