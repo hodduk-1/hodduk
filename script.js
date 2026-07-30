@@ -12,8 +12,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
 /* 1. Open Schedule Countdown Timer */
 function initCountdown() {
-  // Target server open date: 2026-07-24 17:30:00 KST
-  const targetDate = new Date('2026-07-24T17:30:00+09:00').getTime();
+  // Target server open date: 2026-08-01 20:00:00 KST
+  const targetDate = new Date('2026-08-01T20:00:00+09:00').getTime();
 
   function updateTimer() {
     const now = new Date().getTime();
