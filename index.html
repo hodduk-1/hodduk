@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>호떡 서버 - HOTTEOK SERVER</title>
-  <meta name="description" content="정통 클래식 MMORPG 호떡 서버 공식 홈페이지. 안정적인 운영, 쾌적한 환상적인 사냥터와 풍성한 혜택!">
+  <title>호떡 서버 - HOTTEOK SERVER | 리니지 2.0 반하자</title>
+  <meta name="description" content="리니지 2.0 반하자 호떡 서버 공식 홈페이지. 신규지원, 단체지원, 사냥만으로 풀템! 아데나 기반 장기 운영 및 공정한 무중립 운영.">
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,8 +18,8 @@
   <!-- Top Announcement Bar -->
   <div class="announcement-bar" id="announcementBar">
     <div class="announcement-content">
-      <span class="badge-tag">오픈일정</span>
-      <span class="announcement-text">🔥 <strong>11월 17일(화)</strong> 오픈대기 18:00 , 오픈 : 20:00시</span>
+      <span class="badge-tag">2.0 반하자</span>
+      <span class="announcement-text">🔥 <strong>호떡서버</strong> 신규지원 · 단체지원 · 사냥만으로 풀템!</span>
       <div class="countdown" id="countdownTimer">
         <span>남은시간: </span>
         <strong id="timerDays">00</strong>일 
@@ -43,6 +43,8 @@
 
       <nav class="nav-menu" id="navMenu">
         <ul>
+          <li><a href="#server-intro" class="nav-link"><i class="fa-solid fa-fire"></i> 서버소개</a></li>
+          <li><a href="#operator-policy" class="nav-link"><i class="fa-solid fa-gavel"></i> 운영방침</a></li>
           <li><a href="#server-info" class="nav-link"><i class="fa-solid fa-server"></i> 서버정보</a></li>
           <li><a href="#hunting-boss" class="nav-link"><i class="fa-solid fa-dragon"></i> 사냥터 및 보스</a></li>
           <li><a href="#promotion" class="nav-link"><i class="fa-solid fa-bullhorn"></i> 홍보안내</a></li>
@@ -51,6 +53,9 @@
       </nav>
 
       <div class="header-actions">
+        <a href="https://discord.gg/SgSq6t7tEk" target="_blank" rel="noopener noreferrer" class="btn btn-discord">
+          <i class="fa-brands fa-discord"></i> 디스코드
+        </a>
         <button class="btn btn-download" id="headerDownloadBtn">
           <i class="fa-solid fa-download"></i> 다운로드
         </button>
@@ -66,9 +71,18 @@
     </div>
     
     <div class="hero-content">
-      <div class="hero-badge">BEST FANTASY CLASSIC MMORPG</div>
+      <div class="hero-badge">리니지 2.0 반하자 · 신규지원 · 단체지원 · 사냥만으로 풀템</div>
       <h1 class="hero-title">호떡 서버 <span>SEASON 1</span></h1>
-      <p class="hero-subtitle">완벽한 밸런스 · 24시간 실시간 모니터링 · 풍성한 신규 지원 패키지</p>
+      <p class="hero-subtitle">리니지 2.0 반하자의 감성을 그대로! 복잡한 시스템은 줄이고 사냥과 전투의 재미는 극대화</p>
+
+      <div class="hero-cta-group">
+        <button class="btn btn-gold btn-lg" onclick="openModal('modalDownload')">
+          <i class="fa-solid fa-download"></i> 클라이언트 다운로드
+        </button>
+        <a href="https://discord.gg/SgSq6t7tEk" target="_blank" rel="noopener noreferrer" class="btn btn-discord btn-lg">
+          <i class="fa-brands fa-discord"></i> 공식 디스코드 입장
+        </a>
+      </div>
 
       <div class="hero-stats">
         <div class="stat-item">
@@ -102,22 +116,136 @@
       </div>
 
       <!-- Quick Category Cards -->
-      <div class="quick-cards-grid" style="grid-template-columns: repeat(3, 1fr);">
-        <a href="#server-info" class="quick-card">
-          <div class="quick-icon"><i class="fa-solid fa-book-bookmark"></i></div>
-          <div class="quick-title">서버정보</div>
-          <div class="quick-desc">배율, 룰 및 시스템 가이드</div>
+      <div class="quick-cards-grid">
+        <a href="#server-intro" class="quick-card">
+          <div class="quick-icon"><i class="fa-solid fa-gamepad"></i></div>
+          <div class="quick-title">서버소개</div>
+          <div class="quick-desc">2.0 반하자 감성 &amp; 핵심 특징</div>
+        </a>
+        <a href="#operator-policy" class="quick-card">
+          <div class="quick-icon"><i class="fa-solid fa-scale-balanced"></i></div>
+          <div class="quick-title">운영방침</div>
+          <div class="quick-desc">완벽 중립 · 비리/측근 제로</div>
         </a>
         <a href="#promotion" class="quick-card">
           <div class="quick-icon"><i class="fa-solid fa-gift"></i></div>
           <div class="quick-title">홍보안내</div>
           <div class="quick-desc">자동 홍보 참여하고 보상 받기</div>
         </a>
-        <a href="#customer-service" class="quick-card">
-          <div class="quick-icon"><i class="fa-solid fa-comments"></i></div>
-          <div class="quick-title">고객센터</div>
-          <div class="quick-desc">오픈 카카오 및 텔레그램 문의</div>
+        <a href="https://discord.gg/SgSq6t7tEk" target="_blank" rel="noopener noreferrer" class="quick-card">
+          <div class="quick-icon"><i class="fa-brands fa-discord"></i></div>
+          <div class="quick-title">공식 디스코드</div>
+          <div class="quick-desc">실시간 소통 · 공지 및 안내</div>
         </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Server Intro & Operator Policy Section -->
+  <section class="section-container bg-dark-accent" id="server-intro">
+    <div class="section-header">
+      <h2 class="section-title"><i class="fa-solid fa-crown"></i> 2.0 반하자 호떡서버 소개</h2>
+      <p class="section-desc">사냥은 재미있게, 전투는 치열하게, 운영은 꾸준하게.</p>
+    </div>
+
+    <!-- Main Intro Showcase -->
+    <div class="intro-showcase-card">
+      <div class="intro-pill-group">
+        <span class="intro-pill"><i class="fa-solid fa-check"></i> 2.0 반하자 호떡서버</span>
+        <span class="intro-pill"><i class="fa-solid fa-user-plus"></i> 신규지원</span>
+        <span class="intro-pill"><i class="fa-solid fa-users"></i> 단체지원</span>
+        <span class="intro-pill pill-accent"><i class="fa-solid fa-khanda"></i> 사냥만으로 풀템</span>
+      </div>
+      <h3 class="intro-headline">리니지 2.0 반하자의 감성을 그대로!</h3>
+      <p class="intro-lead">
+        복잡한 시스템은 줄이고, 사냥과 전투의 재미는 극대화!<br>
+        리니지 2.0 본연의 재미를 살린 호떡서버에서 새로운 전장을 경험해보세요.
+      </p>
+      <div class="intro-callout">
+        <i class="fa-solid fa-shield-halved"></i> 측근 및 비리로 인한 용 놀이에 맞고만 다니는 거 지겹지 않으신가요?
+      </div>
+      <div class="intro-motto">
+        &ldquo;사냥은 재미있게, 전투는 치열하게, 운영은 꾸준하게.&rdquo;
+      </div>
+    </div>
+
+    <!-- Server Info & Philosophy Grid -->
+    <div class="intro-feature-grid">
+      <div class="info-card">
+        <div class="info-card-header">
+          <span class="info-idx"><i class="fa-solid fa-wand-magic-sparkles"></i></span>
+          <h3 class="info-card-title">호떡 서버 정보</h3>
+          <span class="badge badge-gold">핵심 지향점</span>
+        </div>
+        <div class="info-card-body">
+          <ul class="intro-check-list">
+            <li><i class="fa-solid fa-circle-check text-gold"></i> <span><strong>리니지 2.0 반하자</strong> 정통 감성 구현</span></li>
+            <li><i class="fa-solid fa-circle-check text-gold"></i> <span><strong>아데나 기반</strong>으로 사냥이 필수로 필요한 장기 서버 지향</span></li>
+            <li><i class="fa-solid fa-circle-check text-gold"></i> <span><strong>유저 자율 거래</strong> 시스템 지원</span></li>
+            <li><i class="fa-solid fa-circle-check text-gold"></i> <span><strong>1일 최대 24시간</strong> 자동사냥 가능</span></li>
+            <li><i class="fa-solid fa-circle-check text-gold"></i> <span><strong>쉴 틈 없는 보탐!</strong> 끊임없는 필드 보스 콘텐츠</span></li>
+            <li><i class="fa-solid fa-check text-gold"></i> <span>운영자 개입 최소화</span></li>
+            <li><i class="fa-solid fa-check text-gold"></i> <span>무과금 유저도 충분히 즐길 수 있는 밸런스</span></li>
+            <li><i class="fa-solid fa-check text-gold"></i> <span>서버 진행에 따른 신규 진입 장벽 최소화</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="info-card">
+        <div class="info-card-header">
+          <span class="info-idx"><i class="fa-solid fa-gamepad"></i></span>
+          <h3 class="info-card-title">호떡서버는 다릅니다!</h3>
+          <span class="badge badge-blue">간단 · 명료</span>
+        </div>
+        <div class="info-card-body">
+          <div class="intro-diff-body">
+            <p><strong>복잡한 시스템은 과감히 줄였습니다.</strong></p>
+            <p>리니지 2.0의 감성을 최대한 유지하면서 <strong>사냥, 보스, PK</strong>에 집중할 수 있도록 간단하고 명료한 서버를 목표로 운영합니다.</p>
+            <div class="intro-diff-highlight">
+              무과금 유저도 경쟁할 수 있는 밸런스,<br>
+              끊임없는 전투와 꾸준한 운영.<br>
+              지금 바로 호떡서버에서 진짜 리니지 2.0 반하자를 만나보세요!
+            </div>
+            <div class="intro-diff-actions">
+              <button class="btn btn-gold" onclick="openModal('modalDownload')">
+                <i class="fa-solid fa-download"></i> 클라이언트 다운로드
+              </button>
+              <a href="https://discord.gg/SgSq6t7tEk" target="_blank" rel="noopener noreferrer" class="btn btn-discord">
+                <i class="fa-brands fa-discord"></i> 디스코드 바로가기
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Operator Policy Card -->
+    <div class="policy-banner-card" id="operator-policy">
+      <div class="policy-header">
+        <h3 class="policy-title"><i class="fa-solid fa-bolt"></i> 운영자의 운영방침</h3>
+        <span class="badge badge-red">완벽한 중립 · 원칙 준수</span>
+      </div>
+      <div class="policy-grid">
+        <div class="policy-item policy-ban">
+          <i class="fa-solid fa-ban"></i>
+          <div><strong>핵 사용, 외창, 욕설, 비하, 조롱 등 모두 금지</strong><br>적발 시 예외 없이 서버 원칙에 따라 엄격히 제재합니다.</div>
+        </div>
+        <div class="policy-item policy-ban">
+          <i class="fa-solid fa-khanda"></i>
+          <div><strong>평균 유저 30~50대 나이에 외창 털어 뭐합니까? 칼로 싸우세요.</strong><br>말싸움과 비매너 채팅 대신 정정당당한 필드 전투를 지향합니다.</div>
+        </div>
+        <div class="policy-item policy-strict">
+          <i class="fa-solid fa-scale-balanced"></i>
+          <div><strong>고집 있습니다. 강단 있습니다. 완벽한 중립 유지 및 공정하게 운영합니다.</strong><br>어떠한 측근이나 편파 운영 없이 모든 유저에게 동일한 기준을 적용합니다.</div>
+        </div>
+        <div class="policy-item policy-strict">
+          <i class="fa-solid fa-user-shield"></i>
+          <div><strong>서버 운영 방침에 어긋나는 유저는 받지 않습니다.</strong><br>건강하고 치열한 전장을 함께 만들어갈 유저분들만 모십니다.</div>
+        </div>
+        <div class="policy-item policy-full">
+          <i class="fa-solid fa-triangle-exclamation"></i>
+          <div>운영자를 본인이 다룰 수 있다고 생각하는 분들, 씨알도 먹히지 않습니다. 오산입니다. 오지 마세요.</div>
+        </div>
       </div>
     </div>
   </section>
@@ -413,7 +541,7 @@
           <h3 style="color: var(--color-primary); font-size: 20px; margin: 0;"><i class="fa-solid fa-copy"></i> 홍보 내용</h3>
           <button class="btn btn-outline" onclick="copyPromoText()"><i class="fa-solid fa-clipboard"></i> 홍보내용 복사</button>
         </div>
-        <div id="promoText" class="promo-copy-box" style="white-space: pre-wrap; line-height: 1.7; font-size: 15px; color: #e2e8f0; background: #0c1017; border: 1px solid var(--color-border); padding: 25px; border-radius: 12px;">✅2.0 반하자 호떡서버 ✅11 월 17일 20시 오픈 ( 18시 오픈대기 ) ✅
+        <div id="promoText" class="promo-copy-box" style="white-space: pre-wrap; line-height: 1.7; font-size: 15px; color: #e2e8f0; background: #0c1017; border: 1px solid var(--color-border); padding: 25px; border-radius: 12px;">✅2.0 반하자 호떡서버 ✅신규지원 - 단체지원 - 사냥만의로 풀템 ✅
 리니지 2.0 반하자의 감성을 그대로!
 
 복잡한 시스템은 줄이고, 사냥과 전투의 재미는 극대화!
@@ -431,7 +559,6 @@
 
 ✔️ 운영자 개입 최소화
 ✔️ 무과금 유저도 충분히 즐길 수 있는 밸런스
-✔️ 6개월 이상 장기 운영 지향
 ✔️ 서버진행에따른 신규진입 장벽 최소화
 ━━━━━━━━━━━━━━━━━━━━━━
 
@@ -461,10 +588,7 @@
 "사냥은 재미있게, 전투는 치열하게, 운영은 꾸준하게."
 
 🍫 호떡서버 다운로드 주소
-
-
 홈페이지 https://hodduk-1.github.io/hodduk/#
-
 디스코드 https://discord.gg/SgSq6t7tEk</div>
       </div>
     </div>
@@ -473,22 +597,28 @@
   <!-- Customer Service Section -->
   <section class="section-container bg-dark-accent" id="customer-service">
     <div class="section-header">
-      <h2 class="section-title"><i class="fa-solid fa-headset"></i> 24시간 실시간 고객센터</h2>
+      <h2 class="section-title"><i class="fa-solid fa-headset"></i> 24시간 실시간 고객센터 &amp; 커뮤니티</h2>
       <p class="section-desc">궁금한 점이 있으시거나 도움이 필요하시면 언제든지 문의해주세요</p>
     </div>
 
-    <div class="cs-cards-grid" style="grid-template-columns: repeat(2, 1fr); max-width: 760px; margin: 0 auto;">
-      <a href="https://open.kakao.com/o/ss4rw9Ii" target="_blank" class="cs-box" style="text-decoration: none;">
+    <div class="cs-cards-grid">
+      <a href="https://open.kakao.com/o/ss4rw9Ii" target="_blank" rel="noopener noreferrer" class="cs-box" style="text-decoration: none;">
         <div class="cs-icon"><i class="fa-solid fa-comment-dots" style="color: #fee500;"></i></div>
         <h3>오픈 카카오 실시간 상담</h3>
         <p>1:1 오픈채팅방 실시간 빠른 상담</p>
         <span class="btn-link">오픈채팅 연결하기 &rarr;</span>
       </a>
-      <a href="https://t.me/HOTTEOKCassi" target="_blank" class="cs-box" style="text-decoration: none;">
+      <a href="https://t.me/HOTTEOKCassi" target="_blank" rel="noopener noreferrer" class="cs-box" style="text-decoration: none;">
         <div class="cs-icon"><i class="fa-brands fa-telegram" style="color: #229ed9;"></i></div>
         <h3>텔레그램 (@HOTTEOKCassi)</h3>
         <p>공식 텔레그램 채널 및 1:1 문의</p>
         <span class="btn-link">텔레그램 연결하기 &rarr;</span>
+      </a>
+      <a href="https://discord.gg/SgSq6t7tEk" target="_blank" rel="noopener noreferrer" class="cs-box" style="text-decoration: none;">
+        <div class="cs-icon"><i class="fa-brands fa-discord" style="color: #5865f2;"></i></div>
+        <h3>공식 디스코드</h3>
+        <p>서버 소식, 공지 및 유저 커뮤니티</p>
+        <span class="btn-link">디스코드 입장하기 &rarr;</span>
       </a>
     </div>
   </section>
@@ -500,7 +630,10 @@
       <button class="btn btn-gold btn-block" onclick="openModal('modalDownload')">
         <i class="fa-solid fa-download"></i> 클라이언트 다운
       </button>
-      <a href="https://open.kakao.com/o/ss4rw9Ii" target="_blank" class="btn btn-outline btn-block" style="text-decoration: none;">
+      <a href="https://discord.gg/SgSq6t7tEk" target="_blank" rel="noopener noreferrer" class="btn btn-discord btn-block" style="text-decoration: none;">
+        <i class="fa-brands fa-discord"></i> 디스코드 입장
+      </a>
+      <a href="https://open.kakao.com/o/ss4rw9Ii" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-block" style="text-decoration: none;">
         <i class="fa-solid fa-comments"></i> 카카오 1:1 문의
       </a>
     </div>
@@ -519,10 +652,12 @@
         <p>HOTTEOK CLASSIC MMORPG SERVER</p>
       </div>
       <div class="footer-links">
+        <a href="#server-intro">서버소개</a> | 
+        <a href="#operator-policy">운영방침</a> | 
         <a href="#server-info">서버정보</a> | 
         <a href="#hunting-boss">사냥터안내</a> | 
         <a href="#promotion">홍보안내</a> | 
-        <a href="#customer-service">고객센터</a> | 
+        <a href="https://discord.gg/SgSq6t7tEk" target="_blank" rel="noopener noreferrer">디스코드</a> | 
         <a href="javascript:void(0)" onclick="openModal('modalDownload')">다운로드</a>
       </div>
       <p class="footer-copy">&copy; 2026 HOTTEOK SERVER. All Rights Reserved. 본 서버는 테스트 목적의 프리뷰 서버입니다.</p>

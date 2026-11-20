@@ -1063,6 +1063,273 @@ button {
   box-shadow: 0 4px 15px rgba(245, 190, 46, 0.2);
 }
 
+.btn-discord {
+  background: linear-gradient(135deg, #5865f2 0%, #4752c4 100%);
+  color: #fff;
+  box-shadow: 0 4px 15px rgba(88, 101, 242, 0.35);
+}
+
+.btn-discord:hover {
+  background: linear-gradient(135deg, #7289da 0%, #5865f2 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 25px rgba(88, 101, 242, 0.55);
+  color: #fff;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.hero-cta-group {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  margin-bottom: 34px;
+  flex-wrap: wrap;
+}
+
+/* Server Intro & Operator Policy Showcase */
+.intro-showcase-card {
+  background: linear-gradient(145deg, rgba(24, 30, 48, 0.95) 0%, rgba(12, 16, 26, 0.98) 100%);
+  border: 1px solid rgba(245, 190, 46, 0.35);
+  border-radius: 18px;
+  padding: 40px 36px;
+  margin-bottom: 28px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.45);
+}
+
+.intro-showcase-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, var(--color-primary), #dc2626, var(--color-primary), transparent);
+}
+
+.intro-pill-group {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.intro-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(245, 190, 46, 0.14);
+  border: 1px solid rgba(245, 190, 46, 0.45);
+  color: var(--color-primary);
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.intro-pill.pill-accent {
+  background: rgba(220, 38, 38, 0.16);
+  border-color: rgba(248, 113, 113, 0.45);
+  color: #fca5a5;
+}
+
+.intro-headline {
+  font-size: 30px;
+  font-weight: 900;
+  color: #fff;
+  margin-bottom: 14px;
+  line-height: 1.3;
+}
+
+.intro-lead {
+  font-size: 16px;
+  color: var(--color-text);
+  max-width: 720px;
+  margin: 0 auto 22px;
+  line-height: 1.75;
+}
+
+.intro-callout {
+  display: inline-block;
+  background: rgba(220, 38, 38, 0.12);
+  border: 1px solid rgba(220, 38, 38, 0.4);
+  color: #fecaca;
+  padding: 12px 22px;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 22px;
+}
+
+.intro-motto {
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--color-primary);
+  letter-spacing: -0.3px;
+  padding-top: 18px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.intro-feature-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin-bottom: 28px;
+}
+
+.intro-check-list {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+}
+
+.intro-check-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 15px;
+  color: var(--color-text);
+  line-height: 1.5;
+}
+
+.intro-check-list li i {
+  margin-top: 4px;
+  flex-shrink: 0;
+}
+
+.intro-diff-body {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  font-size: 15px;
+  color: var(--color-text);
+  line-height: 1.7;
+}
+
+.intro-diff-highlight {
+  background: rgba(245, 190, 46, 0.08);
+  border-left: 3px solid var(--color-primary);
+  padding: 12px 16px;
+  border-radius: 0 8px 8px 0;
+  color: #fff;
+  font-weight: 600;
+}
+
+.intro-diff-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+/* Operator Policy Banner */
+.policy-banner-card {
+  background: linear-gradient(135deg, rgba(35, 13, 18, 0.92) 0%, rgba(18, 22, 34, 0.96) 100%);
+  border: 1px solid rgba(220, 38, 38, 0.45);
+  border-radius: 16px;
+  padding: 32px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.policy-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 22px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid rgba(220, 38, 38, 0.25);
+}
+
+.policy-title {
+  font-size: 24px;
+  font-weight: 900;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.policy-title i {
+  color: #f87171;
+}
+
+.policy-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+
+.policy-item {
+  background: rgba(10, 12, 16, 0.65);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  padding: 16px 18px;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 14.5px;
+  line-height: 1.6;
+  color: #f1f5f9;
+}
+
+.policy-item i {
+  font-size: 18px;
+  margin-top: 3px;
+  flex-shrink: 0;
+}
+
+.policy-item.policy-ban i {
+  color: #ef4444;
+}
+
+.policy-item.policy-strict {
+  border-color: rgba(245, 190, 46, 0.3);
+}
+
+.policy-item.policy-strict i {
+  color: var(--color-primary);
+}
+
+.policy-item.policy-full {
+  grid-column: 1 / -1;
+  background: rgba(220, 38, 38, 0.14);
+  border-color: rgba(239, 68, 68, 0.4);
+  font-weight: 700;
+  color: #fecaca;
+}
+
+@media (max-width: 1024px) {
+  .intro-feature-grid,
+  .policy-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .intro-showcase-card {
+    padding: 28px 20px;
+  }
+  .intro-headline {
+    font-size: 23px;
+  }
+  .policy-banner-card {
+    padding: 22px 18px;
+  }
+  .header-actions .btn {
+    padding: 8px 12px;
+    font-size: 13px;
+  }
+}
+
 .promo-copy-box {
   background: var(--bg-accent);
   border: 1px solid rgba(255, 255, 255, 0.1);
